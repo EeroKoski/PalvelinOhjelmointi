@@ -3,11 +3,11 @@
 <head>
 <link type="text/css"rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" /> 
 
-    <title>Booklist</title>
+    <title>Add a book</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+<body>
 	<h1>Add a book</h1>
-	<div class="table table-striped">
 		<form th:object="${book}" th:action="@{save}" action="#" method="post">
 	<div class="form-row">
     <div class="form-group col-md-6">
@@ -26,10 +26,9 @@
 			<label for="isbn">ISBN: </label>
 			<input type="text" id="isbn" th:field="*{isbn}" />
 </div>
-
 </div>
 
-<label for="price">Price: </label>
+			<label for="price">Price: </label>
 			<input type="text" id="price" th:field="*{price}" />
 			
     <div class="form-group col-md-6">			
@@ -41,6 +40,5 @@
 			
 			<input type="submit" value="Save" class="btn btn-success"></input>
 		</form>
-	</div>
 </body>
 </html>
